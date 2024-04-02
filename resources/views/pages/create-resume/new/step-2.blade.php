@@ -61,8 +61,8 @@
 <br>
 <!-- Navigation Buttons with Inline Style for Correct Positioning -->
 <div style="display: flex; justify-content: space-between; padding: 0 10%;">
-    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-nav" data-page="begin"><span><</span>Previous</button>
-    <button style="background-color:#0052C1;" type="button" class="btn btn-primary btn-nav" data-page="heading" >Next <span>></span></button>
+    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-prev" data-page="begin"><span><</span>Previous</button>
+    <button style="background-color:#0052C1;" type="button" class="btn btn-primary btn-next" data-page="heading" >Next <span>></span></button>
 </div>
 
 @endsection
@@ -70,16 +70,15 @@
 <script>
 window.addEventListener('load', function() {
 
-$('.btn-nav').click(function() {
-    var page = $(this).attr("data-page");
-    let href = "{{url('/create-resume?page=')}}"+page;
+$('.btn-prev').click(function() {
+    let href = document.referrer;
     if(href) {
         window.location = href;
     }
 });
 $('.btn-next').click(function() {
     
-    let href = "{{url('/select-job-option')}}";
+    let href = "{{url('/create-resume?page=3')}}";
     if(href) {
         window.location = href;
     }

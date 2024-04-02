@@ -6,12 +6,12 @@
             <h3>Select one option</h3>
         </div>
         <div class="option-boxes">
-            <div class="white-box" data-option="job-role"  role="button" >
+            <div class="white-box" data-option="job-role" role="button" >
                 <h4>SELECT A JOB ROLE</h4><br>
                 <img src="assets/img/edit_document.svg" alt="Edit Document" style="width: 48px; height: 48px;"><br>
                 <br><p>Select from a list of job roles</p>
             </div>
-            <div class="white-box" data-option="job-description"  role="button" >
+            <div class="white-box" data-option="job-description" role="button" >
                 <h4>USE A JOB DESCRIPTION</h4><br>
                 <img src="assets/img/upload.svg" alt="Upload" style="width: 48px; height: 48px;"><br>
                 <br><p>Copy and paste the job description</p>
@@ -23,8 +23,8 @@
 <br>
 <!-- Navigation Buttons with Inline Style for Correct Positioning -->
 <div style="display: flex; justify-content: space-between; padding: 0 10%;">
-    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-nav" data-page="begin"><span><</span>Previous</button>
-    <button style="background-color:#0052C1;" type="button" class="btn btn-primary btn-next" >Next <span>></span></button>
+    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-prev"><span><</span>Previous</button>
+    <button style="background-color:#0052C1;" type="button" class="btn btn-primary btn-next" data-page="step-2">Next <span>></span></button>
 </div>
 
 @endsection
@@ -40,7 +40,7 @@ $('.white-box').click(function() {
                 url: "{{url('set-resume-option')}}", // Replace with your controller route
                 method: 'GET', // or 'GET', depending on your controller route
                 data: {
-                    option: val // Send the value to the controller
+                    job_option: val,
                 },
                 success: function(response) {
                     // Handle success response
@@ -52,16 +52,15 @@ $('.white-box').click(function() {
                 }
             });
 });
-$('.btn-nav').click(function() {
-    var page = $(this).attr("data-page");
-    let href = "{{url('/create-resume?page=')}}"+page;
+$('.btn-prev').click(function() {
+    let href = document.referrer;
     if(href) {
         window.location = href;
     }
 });
 $('.btn-next').click(function() {
     
-    let href = "{{url('/select-job-option')}}";
+    let href = "{{url('/create-resume?page=2')}}";
     if(href) {
         window.location = href;
     }

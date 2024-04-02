@@ -52,7 +52,7 @@
 <br>
 <!-- Navigation Buttons with Inline Style for Correct Positioning -->
 <div style="display: flex; justify-content: space-between; padding: 0 10%;">
-    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-nav" data-page="begin"><span><</span>Previous</button>
+    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-prev" data-page="begin"><span><</span>Previous</button>
     <button style="background-color:#0052C1;" type="button" class="btn btn-primary btn-next" data-page="heading" >Next <span>></span></button>
 </div>
 
@@ -62,7 +62,13 @@
 
 $('.btn-next').click(function() {
     $('#information_form').submit();
-})
+});
+$('.btn-prev').click(function() {
+    let href = document.referrer;
+    if(href) {
+        window.location = href;
+    }
+});
 })
 
 </script>

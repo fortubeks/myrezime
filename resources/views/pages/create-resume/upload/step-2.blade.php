@@ -3,18 +3,18 @@
 </br></br></br></br></br>
 <div class="container">
         <div class="blue-box">
-            <h3>How would you prefer to begin?</h3>
+            <h3>Select one option</h3>
         </div>
         <div class="option-boxes">
-            <div class="white-box" data-option="new"  role="button" >
-                <h4>CREATE A NEW RESUME</h4><br>
+            <div class="white-box" data-option="job-role" role="button" >
+                <h4>SELECT A JOB ROLE</h4><br>
                 <img src="assets/img/edit_document.svg" alt="Edit Document" style="width: 48px; height: 48px;"><br>
-                <br><p>We will commence from the beginning</p>
+                <br><p>Select from a list of job roles</p>
             </div>
-            <div class="white-box" data-option="upload"  role="button" >
-                <h4>USE YOUR RESUME</h4><br>
+            <div class="white-box" data-option="job-description" role="button" >
+                <h4>USE A JOB DESCRIPTION</h4><br>
                 <img src="assets/img/upload.svg" alt="Upload" style="width: 48px; height: 48px;"><br>
-                <br><p>We will import information from your resume</p>
+                <br><p>Copy and paste the job description</p>
             </div>
         </div>     
     </div>  
@@ -23,7 +23,7 @@
 <br>
 <!-- Navigation Buttons with Inline Style for Correct Positioning -->
 <div style="display: flex; justify-content: space-between; padding: 0 10%;">
-    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-prev" data-page="home"><span><</span>Previous</button>
+    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary btn-prev"><span><</span>Previous</button>
     <button style="background-color:#0052C1;" type="button" class="btn btn-primary btn-next" data-page="step-2">Next <span>></span></button>
 </div>
 
@@ -40,7 +40,7 @@ $('.white-box').click(function() {
                 url: "{{url('set-resume-option')}}", // Replace with your controller route
                 method: 'GET', // or 'GET', depending on your controller route
                 data: {
-                    option: val // Send the value to the controller
+                    job_option: val,
                 },
                 success: function(response) {
                     // Handle success response
@@ -52,14 +52,18 @@ $('.white-box').click(function() {
                 }
             });
 });
-
-$('.btn-next').click(function() {
-    
-    let href = "{{url('/create-resume?page=1')}}";
+$('.btn-prev').click(function() {
+    let href = document.referrer;
     if(href) {
         window.location = href;
     }
 });
-
+$('.btn-next').click(function() {
+    
+    let href = "{{url('/create-resume?page=3')}}";
+    if(href) {
+        window.location = href;
+    }
+});
 });
 </script>

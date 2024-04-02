@@ -57,7 +57,7 @@
                 <div class="attr-nav button-light">
                     <ul>
                         <li>
-                            <a href="#" target="_blank">My Account</a>
+                            <a href="{{url('/home')}}">My Account</a>
                         </li>
                     </ul>
                 </div>
@@ -142,7 +142,7 @@
                                     <a href="#">Compnay History</a>
                                 </li>
                                 <li>
-                                    <a href="#">Management </a>
+                                    <a href="https://books.google.co.in/books/about?id=c8X9EAAAQBAJ&redir_esc=y" target="_blank">Employees' Gate: The Book </a>
                                 </li>
                                 <li>
                                     <a href="#">Features</a>

@@ -12,7 +12,8 @@
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
         "smalot/pdfparser": "^2.9",
-        "spatie/laravel-pdf": "^1.4"
+        "spatie/laravel-pdf": "^1.4",
+        "spatie/pdf-to-text": "^1.52"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
