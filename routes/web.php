@@ -24,6 +24,10 @@ Route::post('/upload-resume', [App\Http\Controllers\CreateResumeController::clas
 Route::get('/download-resume', [App\Http\Controllers\ResumeController::class, 'downloadResume']);
 //END CREATE RESUME ROUTES
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth', 'verified'] ], function () {
+    // Home route
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/profile/{page}', 'App\Http\Controllers\HomeController@goToProfileTab');
+});
