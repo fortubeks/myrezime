@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('state')->nullable();
             $table->string('linkedin')->nullable();
+            $table->string('storage_url')->nullable();
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@ class Resume extends Model
 {
     use HasFactory;
     protected $fillable = ['user_id','job_role_id','job_description','first_name','last_name','phone',
-    'email','address','state','linkedin','option_resume','option_create_by'];
+    'email','address','state','linkedin','option_resume','option_create_by','storage_url'];
 
     public function name(){
         return $this->first_name . ' '. $this->last_name;
@@ -22,5 +22,8 @@ class Resume extends Model
     }
     public function skills(){
         return $this->hasMany(Skill::class);
+    }
+    public function jobRole(){
+        return $this->belongsTo(JobRole::class);
     }
 }

@@ -3,22 +3,10 @@
 </br></br></br></br></br>
 <div class="container">
         <div class="blue-box">
-            <h3>Select one option</h3>
+            <h3>Upload Your Resume</h3>
         </div>
         <div class="option-boxes">
-            <div class="white-box"  role="button" >
-                <br>
-                <img src="{{env('APP_URL')}}/assets/img/uoload.svg" alt="upload" style="width: 48px; height: 48px;"><br>
-                <br><h4>Drag and drop file here</h4>
-                <div style="display: flex; justify-content: space-between; ">
-                    <button  style="background-color:#0052C1;" type="button" class="btn btn-primary"><span></span>FROM DEVICE</button>
-                    <button style="background-color:#0052C1;" type="button" class="btn btn-primary">
-                        <i class="fas fa-cloud-upload-alt"></i> FROM CLOUD
-                    </button>
-                    
-                </div>
-                
-            </div>
+            
             
             <div class="white-box"  role="button" >
                 <h4>Upload</h4><br>

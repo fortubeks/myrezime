@@ -11,31 +11,31 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" name="first_name" placeholder="Emeka">
+                        <input type="text" class="form-control" name="first_name" value="{{$resume->first_name}}" placeholder="Emeka">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="surname">Last Name</label>
-                        <input type="text" class="form-control" name="last_name" placeholder="Jonathan">
+                        <input type="text" class="form-control" name="last_name" value="{{$resume->last_name}}" placeholder="Jonathan">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="phone">Phone</label>
-                        <input type="text" class="form-control" name="phone" placeholder="+234909448484">
+                        <input type="text" class="form-control" name="phone" value="{{$resume->phone}}" placeholder="+234909448484">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="email@example.com">
+                        <input type="email" class="form-control" name="email" value="{{$resume->email}}" placeholder="email@example.com">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="country">Address</label>
-                        <input type="text" class="form-control" name="address" placeholder="No 4 Ekimi Street">
+                        <input type="text" class="form-control" name="address" value="{{$resume->address}}" placeholder="No 4 Ekimi Street">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="city">City</label>
-                        <input type="text" class="form-control" name="state" placeholder="Lagos">
+                        <input type="text" class="form-control" name="state" value="{{$resume->state}}" placeholder="Lagos">
                     </div>
                 </div>
                 <div class="form-row">

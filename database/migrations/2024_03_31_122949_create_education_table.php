@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('resume_id');
             $table->string('degree');
-            $table->string('school');
-            $table->string('duration');
+            $table->string('school_name');
+            $table->string('school_location');
+            $table->string('field_of_study');
+            $table->string('month_year');
             $table->timestamps();
         });
     }

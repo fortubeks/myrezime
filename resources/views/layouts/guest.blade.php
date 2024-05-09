@@ -123,7 +123,7 @@
                         <div class="f-item">
                             <img src="{{env('APP_URL')}}/assets/img/rezmi.png" style="height: 60px; width: auto;" alt="Logo">
                             <p>
-                                Excellence decisively nay man yet impression for contrasted remarkably. There spoke happy for you are out. Fertile how old address.
+                            My Rezime is transforming the resume writing process with the power of Artificial Intelligence. We empower job seekers of all backgrounds to create impactful resumes that stand out from the crowd.
                             </p>
                           
                         </div>

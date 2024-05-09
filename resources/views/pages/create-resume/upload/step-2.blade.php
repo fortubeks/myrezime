@@ -3,7 +3,7 @@
 </br></br></br></br></br>
 <div class="container">
         <div class="blue-box">
-            <h3>Select one option</h3>
+            <h3>How do you want to create your Resume?</h3>
         </div>
         <div class="option-boxes">
             <div class="white-box" data-option="job-role" role="button" >

@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                    <label for="linkedinLink">LinkedIn Link</label>
+                    <label for="linkedinLink">LinkedIn Link (*optional)</label>
                     <input type="url" class="form-control" name="linkedin" placeholder="https://linkedin.com/in/username">
                     </div>
                 </div>

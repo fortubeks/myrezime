@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('resume_id');
             $table->string('job_role');
             $table->string('company');
+            $table->string('job_type');
             $table->text('about');
             $table->string('duration')->default('Jun 2014 - Sept 2015');
             $table->timestamps();
