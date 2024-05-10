@@ -26,7 +26,7 @@ Route::get('/resume-preview', [App\Http\Controllers\ResumeController::class, 'pr
 
 Route::post('/upload-resume', [App\Http\Controllers\CreateResumeController::class, 'upload']);
 
-Route::get('/download-resume', [App\Http\Controllers\ResumeController::class, 'downloadResume']);
+Route::post('/download-resume', [App\Http\Controllers\ResumeController::class, 'downloadResume']);
 
 Route::get('/test', [App\Http\Controllers\CreateResumeController::class, 'getExtractedInformationFromCV']);
 //END CREATE RESUME ROUTES

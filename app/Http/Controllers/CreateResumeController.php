@@ -236,7 +236,7 @@ class CreateResumeController extends Controller
             "message": "PDF file downloaded and information extracted successfully",
             "extracted_details": {
                 "name": "Ajibade Sabeeh",
-                "email": "detunjinov@gmail.com",
+                "email": "customer@email.com",
                 "phone_number": "+2348139589883",
                 "contact_info": "9, Balogun Crescent, Oja Oba, Alimosho, Lagos State.",
                 "summary": "Skilled and experienced Product Manager with a proven track record of driving the development and enhancement of product offerings. Strong analytical skills, strategic thinking, and a passion for delivering exceptional customer experiences. MBA preferred.",
