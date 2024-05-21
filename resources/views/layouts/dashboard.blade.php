@@ -38,7 +38,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="/" class="brand-logo">
-				<img src="assets/img/rezmi.png" alt="Logo" class="img-fluid" style="max-width: 200px; margin: 0 auto;">
+				<img src="{{env('APP_URL')}}/assets/img/rezmi.png" alt="Logo" class="img-fluid" style="max-width: 200px; margin: 0 auto;">
 
             </a>
             <div class="nav-control">
@@ -78,15 +78,15 @@
 	Scripts
 ***********************************-->
 <!-- Required vendors -->
-<script src="vendor/global/global.min.js"></script>
-<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="{{env('APP_URL')}}/vendor/global/global.min.js"></script>
+<script src="{{env('APP_URL')}}/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
 <!-- Dashboard 1 -->
-<script src="js/dashboard/dashboard-1.js"></script>
+<script src="{{env('APP_URL')}}/js/dashboard/dashboard-1.js"></script>
 
-<script src="vendor/owl-carousel/owl.carousel.js"></script>
+<script src="{{env('APP_URL')}}/vendor/owl-carousel/owl.carousel.js"></script>
 
-<script src="js/custom.min.js"></script>
-<script src="js/dlabnav-init.js"></script>
+<script src="{{env('APP_URL')}}/js/custom.min.js"></script>
+<script src="{{env('APP_URL')}}/js/dlabnav-init.js"></script>
 </body>
 </html>
